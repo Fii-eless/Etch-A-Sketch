@@ -1,0 +1,61 @@
+html > * {
+    box-sizing: border-box;
+    margin-top: 0;
+    background-color: rgb(0, 0, 0);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+body > * {
+    margin-bottom: 40px;
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-family: 'Chalk', sans-serif;
+    font-size: 100px;
+    font-weight:700;
+    color: rgb(255, 255, 255);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.heading > p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.board {
+    border: 2px dotted yellow;
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    align-items: center;
+    width: 60rem;
+    height: 50rem;
+}
+.board > #tuneUp {
+    display: flex;
+    flex-direction: column;
+}
+.board > #slate {
+    width: 560px;
+    height: 560px;
+    border: 2px dotted yellow;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.board > #slate > * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
