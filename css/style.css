@@ -73,10 +73,13 @@ h1 {
     display: flex;
     flex-wrap: wrap;
 }
-#slate > * {
+#slate > div {
     padding: 0;
     margin: 0;
     border: 0;
+    display: flex;
+    flex: 0 1 auto;
+    transition: all .04s ease;
 }
 #boardType {
     flex: 1 auto;
@@ -86,11 +89,9 @@ h1 {
     align-items: center;
     gap: 40px;
     border: 2px ridge rgba(241, 241, 229, 0.39);
+    padding-top: 8px;
     background-color: rgba(241, 241, 229, 0.39);
 }
-/* .boardType > * {
-    margin-bottom: 40px;
-} */
 .backDrop {
     display: flex;
     flex-direction: column;
@@ -107,6 +108,7 @@ h1 {
     align-items: center;
     border-radius: 50%;
     border: 4px groove rgb(255, 255, 255);
+    transition: all .01s;
 }
 #classicSlate > div {
     background-color: rgb(0, 0, 0);
@@ -122,7 +124,9 @@ h1 {
     border-image-slice: 1;
     border-radius: 50%;
 }
-#random > div {
+#random > input {
+    height: 60px;
+    width: 60px;
     background-color: rgb(250, 250, 250);
     border: 6px solid;
     border-image-source: linear-gradient(45deg, red, orange, yellow, green, indigo, violet);
@@ -137,5 +141,101 @@ h1 {
     width: auto;
     height: auto;
     padding: 30px;
-    gap: 30px;
+    gap: 70px;
+}
+.backDropOn {
+  transform: scale(1.1);
+  /* border-color: #ffc600; */
+  box-shadow: 0 0 1rem #ffc600;
+}
+.chalk {
+    background-color: rgb(250, 250, 250);
+}
+.marker {
+    background-color: rgb(0, 0, 0);
+}
+.red {
+    background-color: red;
+}
+.orange {
+    background-color: orange;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+.indigo {
+    background-color: indigo;
+}
+.violet {
+    background-color: violet;
+}
+.sliderContainer {
+    /* border: 2px dotted yellow; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 20px;
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+#pencilTip {
+    -webkit-appearance: none;
+    width: 75%;
+    height: 10px;
+    background-image: linear-gradient(90deg, rgb(26, 221, 26) 40%, rgb(194, 194, 218) 40%);
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 12px;
+    box-shadow: 0px 1px 10px 1px black;
+}
+#pencilTip:hover {
+    opacity: 1;
+}
+#pencilTip::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(65, 65, 163);
+    border-radius: 50%;
+    cursor: pointer;
+}
+#pencilTip::-mox-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(213, 236, 232);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.sliderContainer > p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 25px;
+    opacity: 0.7;
+}
+.slateAddons {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.slateColor > p {
+    color: white;
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    margin-top: 25px;
+    opacity: 0.7;
 }
