@@ -34,14 +34,23 @@
                     <p>Rainbow on White</p>
                 </div>
                 <div class="backDrop boardWriting" id="random">
-                    <div></div>
-                    <p>Random</p>
+                    <input type="color" id="color">
+                    <p>Random Pencil Color</p>
                 </div>
             </div>
         </div>
         <div id="slateArea">
             <div id="slate"></div>
-            <input type="number" id="pencilTip"></input>
+            <div class="slateAddons">
+                <div class="sliderContainer">
+                    <input type="range" id="pencilTip" min="2" max="25" value="10" class="slider">
+                    <p>Value: <span id="value"></span></p>
+                </div>
+                <div class="slateColor">
+                    <input type="color" id="slateColor" value="#d5ece8">
+                    <p>Choose Slate Color</p>
+                </div>
+            </div>
         </div>
     </div>
     <footer></footer>
